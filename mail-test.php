@@ -16,9 +16,10 @@
 	*/
 	
 	$server = array( 
-		'HTTP_HOST', 'SERVER_NAME', 'SERVER_ADDR', 'SERVER_PORT', 'SERVER_ADMIN', 
-		'SERVER_SIGNATURE', 'SERVER_SOFTWARE', 'REMOTE_ADDR', 'DOCUMENT_ROOT', 
-		'REQUEST_URI', 'SCRIPT_NAME', 'SCRIPT_FILENAME',
+		'HTTP_HOST', 'SERVER_NAME', 'SERVER_ADDR', 'SERVER_PORT',
+ 		'SERVER_ADMIN', 'SERVER_SIGNATURE', 'SERVER_SOFTWARE', 
+		'REMOTE_ADDR', 'DOCUMENT_ROOT', 'REQUEST_URI', 
+		'SCRIPT_NAME', 'SCRIPT_FILENAME',
 	);
 	
 	$to      = ( isset( $_GET['email'] ) ? $_GET['email'] : FALSE );
@@ -37,8 +38,8 @@
 	};
 	
 	$headers = 'From: ' . $from . PHP_EOL 
-		     . 'Reply-To: ' . $from . PHP_EOL 
-			 . 'X-Mailer: PHP/' . phpversion(); 
+		 . 'Reply-To: ' . $from . PHP_EOL 
+		 . 'X-Mailer: PHP/' . phpversion(); 
 	
 	if ( isset( $_GET['send'] ) && $_GET['send'] === 'true' )
 	{					
