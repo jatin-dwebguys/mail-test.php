@@ -1,5 +1,9 @@
 <?php
 
+	/*
+	DONT FORGET TO DELETE THIS SCRIPT WHEN FINISHED!
+	*/
+
 	ini_set( 'display_errors', 1 );
 	error_reporting( E_ALL );
 	
